@@ -66,7 +66,7 @@ namespace A06
             }
             return all;
         }
-        public void UpdatePuffer()
+        void UpdatePuffer()
         {
             for (int i = 0; i < puffer.Length - 1; i++)
             {

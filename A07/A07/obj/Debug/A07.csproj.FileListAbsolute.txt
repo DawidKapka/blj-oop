@@ -1,0 +1,10 @@
+C:\Users\vmadmin\Documents\blj-oop\A07\A07\bin\Debug\A07.exe.config
+C:\Users\vmadmin\Documents\blj-oop\A07\A07\bin\Debug\A07.exe
+C:\Users\vmadmin\Documents\blj-oop\A07\A07\bin\Debug\A07.pdb
+C:\Users\vmadmin\Documents\blj-oop\A07\A07\obj\Debug\A07.csprojAssemblyReference.cache
+C:\Users\vmadmin\Documents\blj-oop\A07\A07\obj\Debug\A07.Form1.resources
+C:\Users\vmadmin\Documents\blj-oop\A07\A07\obj\Debug\A07.Properties.Resources.resources
+C:\Users\vmadmin\Documents\blj-oop\A07\A07\obj\Debug\A07.csproj.GenerateResource.cache
+C:\Users\vmadmin\Documents\blj-oop\A07\A07\obj\Debug\A07.csproj.CoreCompileInputs.cache
+C:\Users\vmadmin\Documents\blj-oop\A07\A07\obj\Debug\A07.exe
+C:\Users\vmadmin\Documents\blj-oop\A07\A07\obj\Debug\A07.pdb
