@@ -1,0 +1,10 @@
+C:\Users\vmadmin\source\repos\A05\A05\bin\Debug\A05.exe.config
+C:\Users\vmadmin\source\repos\A05\A05\bin\Debug\A05.exe
+C:\Users\vmadmin\source\repos\A05\A05\bin\Debug\A05.pdb
+C:\Users\vmadmin\source\repos\A05\A05\obj\Debug\A05.csprojAssemblyReference.cache
+C:\Users\vmadmin\source\repos\A05\A05\obj\Debug\A05.Form1.resources
+C:\Users\vmadmin\source\repos\A05\A05\obj\Debug\A05.Properties.Resources.resources
+C:\Users\vmadmin\source\repos\A05\A05\obj\Debug\A05.csproj.GenerateResource.cache
+C:\Users\vmadmin\source\repos\A05\A05\obj\Debug\A05.csproj.CoreCompileInputs.cache
+C:\Users\vmadmin\source\repos\A05\A05\obj\Debug\A05.exe
+C:\Users\vmadmin\source\repos\A05\A05\obj\Debug\A05.pdb
