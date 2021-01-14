@@ -14,30 +14,26 @@ namespace A07
         {
             tab = wrdTab;
         }
-        public String[] Parse(String text)
+        public void Parse(String text)
         {
-            String[] words = new string[1];
-            text.ToCharArray();
-            int j = 1;
+            String word = "";
+            char[] charArr = text.ToCharArray();
 
-                for (int i = 0; i < text.Length; i++)
-                {
-                    if (!text[i].Equals(" "))
-                    {
-                        Array.Resize(ref words, j + 1);
-                        words[j] += text[i];
-                    }
-                    else
-                    {
-                        j++;
-                    }
-
-                }
-            for (int i = 0; i < words.Length; i++)
+            for (int i = 0; i < charArr.Length; i++)
             {
-                Console.WriteLine(words[i]);
+                if (!charArr[i].Equals(' '))
+                {
+                    word += charArr[i];
+                }
+                else
+                {
+                    tab.AddWord(word);
+                    word = "";
+                }
             }
-            return words;
+            tab.AddWord(word);
+            word = "";
+            String table = tab.GetTab();
         }
     }
 }
