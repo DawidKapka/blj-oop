@@ -35,7 +35,7 @@ namespace A03
             speed = speedValue;
         }
 
-        public double CalculateResult(double distance, double speed, bool days)
+        public double CalculateResult()
         {
             double result = distance / speed;
             if (days)

@@ -24,7 +24,7 @@ namespace A04
             ctrl.Birth = datePicker.Value;
             try
             {
-                result.Text = Convert.ToString(ctrl.GetTimeSpan(ctrl.Today, ctrl.Birth, ctrl.Unit));
+                result.Text = Convert.ToString(ctrl.GetTimeSpan());
             }
             catch (Exception ex)
             {

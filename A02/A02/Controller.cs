@@ -37,7 +37,7 @@ namespace A02
             }
             height = heightValue;
         }
-        public double CalculateResult(double width, double height)
+        public double CalculateResult()
         {
             double result = width * height;
             return result;

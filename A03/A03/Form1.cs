@@ -29,7 +29,7 @@ namespace A03
             {
                 MessageBox.Show(ex.Message);
             }
-            result.Text = Convert.ToString(ctrl.CalculateResult(ctrl.Distance, ctrl.Speed, ctrl.Days));
+            result.Text = Convert.ToString(ctrl.CalculateResult());
 
         }
     }

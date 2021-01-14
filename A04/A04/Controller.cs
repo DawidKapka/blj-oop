@@ -27,7 +27,7 @@ namespace A04
             get { return today; }
         }
 
-        public int GetTimeSpan(DateTime today, DateTime birth, String unit)
+        public int GetTimeSpan()
         {
             int result = 0;
 
@@ -35,24 +35,23 @@ namespace A04
             {
                 throw new Exception("Keine Einheit ausgewählt!");
             }
-            TimeSpan interval = today - birth;
+            TimeSpan span = today - birth;
             if (unit == "years")
             {
-                result = interval.Days / 365;
+                result = Convert.ToInt32(Math.Floor(span.TotalDays / 365));
             }
             else if (unit == "months")
             {
-                result = interval.Days / 30;
+                result = Convert.ToInt32(Math.Floor(span.TotalDays / 30.4));
             }
             else if (unit == "weeks")
             {
-                result = interval.Days / 7;
+                result = Convert.ToInt32(Math.Floor(span.TotalDays / 7));
             }
             else if (unit == "days")
             {
-                result = interval.Days;
+                result = Convert.ToInt32(span.TotalDays);
             }
-            
             return result;
 
         }

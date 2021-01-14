@@ -43,7 +43,7 @@ namespace A02
             {
                 MessageBox.Show(ex.Message);
             } 
-            textBox3.Text = Convert.ToString(ctrl.CalculateResult(ctrl.Width, ctrl.Height));
+            textBox3.Text = Convert.ToString(ctrl.CalculateResult());
 
             
         }
