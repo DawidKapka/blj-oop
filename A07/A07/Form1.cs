@@ -21,7 +21,17 @@ namespace A07
         {
             WordTab wrdTab = new WordTab();
             Parser parser = new Parser(wrdTab);
-            parser.Parse(textBox.Text);
+            try
+            {
+                parser.Parse(textBox.Text);
+                String table = wrdTab.GetTab();
+                wrdTab.PrintTab(table, outputBox);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
 
         }
     }

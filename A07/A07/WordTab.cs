@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace A07
 {
@@ -23,30 +24,22 @@ namespace A07
         }
         public String GetTab()
         {
-            CountWords();
-            return "1";
-        }
-        void CountWords()
-        {
-            int[] count = new int[3];
-            for (int i = 0; i < count.Length; i++)
+            String table = String.Format("{0,-20} {1,20}", "Wort", "Anzahl");
+            var groups = allWords.GroupBy(v => v);
+            foreach (var group in groups)
             {
-                for (int j = 0; j < allWords.Length; j++)
-                {
-                    if (allWords[i] == allWords[j])
-                    {
-                        count[i]++;
-                    }
-                }
-                
+                table += Environment.NewLine;
+                String line = String.Format("{0,-20} {1,20}", group.Key, group.Count());
+                table += line;
             }
-            for (int i = 0; i < count.Length; i++)
-            {
-                Console.WriteLine(count[i]);
-            }
+            table = table.Substring(0, table.Length-3);
+            return table;
 
+        }
+        public void PrintTab(String table, TextBox outputBox)
+        {
+            outputBox.Text = table;
         }
         
     }
-
 }

@@ -16,24 +16,31 @@ namespace A07
         }
         public void Parse(String text)
         {
+            if (text == "")
+            {
+                throw new Exception("Es wurde kein Text eingegeben!");
+            }
             String word = "";
             char[] charArr = text.ToCharArray();
 
             for (int i = 0; i < charArr.Length; i++)
             {
-                if (!charArr[i].Equals(' '))
+                if (charArr[i].Equals(' ') || charArr[i].Equals(',') || charArr[i].Equals('.'))
                 {
-                    word += charArr[i];
+                    if (word != "")
+                    {
+                        tab.AddWord(word);
+                        word = "";
+                    }
                 }
                 else
                 {
-                    tab.AddWord(word);
-                    word = "";
+                    word += charArr[i];
                 }
             }
             tab.AddWord(word);
-            word = "";
-            String table = tab.GetTab();
+            Console.WriteLine(word);
+            
         }
     }
 }
