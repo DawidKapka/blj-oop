@@ -8,6 +8,11 @@ namespace A09
 {
     class C
     {
-        
+        public static int count = 0;
+
+        public C()
+        {
+            count++;
+        }
     }
 }
