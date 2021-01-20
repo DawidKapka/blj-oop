@@ -12,26 +12,24 @@ namespace A09
 {
     public partial class Form1 : Form
     {
-        int Counter;
+        List<C> instances = new List<C>();
+
         public Form1()
         {
             InitializeComponent();
-
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            C c = new C();
-            countBox.Text = Convert.ToString(C.count);
-            
+            instances.Add(new C());
+            countBox.Text = Convert.ToString(instances.Count());
             
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            C.count = 0;
-            countBox.Text = Convert.ToString(C.count);
-            GC.Collect();
+            instances.Clear();
+            countBox.Text = Convert.ToString(instances.Count());
         }
     }
 }
