@@ -155,10 +155,18 @@ namespace A20
         {
             if (!isSearch)
             {
-                isSearch = true;
-                searchButton.Text = "Show All";
-                taskList = tasks.Search(searchBox.Text);
-                UpdateTable();
+                try
+                {
+                    taskList = tasks.Search(searchBox.Text);
+                    isSearch = true;
+                    searchButton.Text = "Show All";
+                    UpdateTable();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+
             }
             else
             {

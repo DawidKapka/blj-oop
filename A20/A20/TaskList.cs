@@ -22,7 +22,13 @@ namespace A20
 
         public void Add(Task task)
         {
+            if (task.Title == "")
+                throw new Exception("Invalid Title!");
+            if (DateTime.Compare(DateTime.Now, task.Due) >= 0)
+                throw new Exception("Invalid Due Date!");
             tasks.Add(task);
+
+            
         }
         public void Remove(Task task)
         {
@@ -30,10 +36,16 @@ namespace A20
         }
         public List<Task> Search(String searchCrit)
         {
+            if (searchCrit == "")
+                throw new Exception("Nothing to search for...");
             List<Task> tasksSearch = new List<Task>();
             foreach (Task task in tasks)
             {
-                if (searchCrit.ToLower() == task.Title.ToLower() || searchCrit.ToLower() == task.Desc.ToLower() || searchCrit == task.Creation.ToString() || searchCrit == task.Due.ToString() || searchCrit.ToLower() == task.TaskState.ToString().ToLower())
+                if (task.Title.ToLower().Contains(searchCrit.ToLower())
+                    || task.Desc.ToLower().Contains(searchCrit.ToLower())
+                    || searchCrit == task.Creation.ToString() 
+                    || searchCrit == task.Due.ToString() 
+                    || searchCrit.ToLower() == task.TaskState.ToString().ToLower())
                 {
                     tasksSearch.Add(task);
                 }

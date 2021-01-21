@@ -30,16 +30,26 @@ namespace A20
         public Form1 ParentForm { get; set; }
         private void saveButton_Click(object sender, EventArgs e)
         {
-            task.Title = titleBox.Text;
-            task.Desc = descBox.Text;
-            task.Creation = DateTime.Parse(crDateLabel.Text);
-            task.Due = dueDatePicker.Value;
-            task.TaskState = (Task.State)stateBox.SelectedItem;
-            if (ParentForm != null)
+            try
             {
-                ParentForm.UpdateTable();
+                if (DateTime.Compare(DateTime.Now, dueDatePicker.Value) >= 0)
+                    throw new Exception("Invalid Due Date!");
+                task.Title = titleBox.Text;
+                task.Desc = descBox.Text;
+                task.Creation = DateTime.Parse(crDateLabel.Text);
+                task.Due = dueDatePicker.Value;
+                task.TaskState = (Task.State)stateBox.SelectedItem;
+                if (ParentForm != null)
+                {
+                    ParentForm.UpdateTable();
+                }
+                this.Close();
             }
-            this.Close();
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
 
         }
 
