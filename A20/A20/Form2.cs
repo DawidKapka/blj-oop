@@ -15,14 +15,17 @@ namespace A20
         {
             InitializeComponent();
         }
-
+        public Form1 ParentForm { get; set; }
 
         private void createButton_Click(object sender, EventArgs e)
         {
             Task newTask = new Task(titleBox.Text, descBox.Text, dateBox.Value, DateTime.Now, Task.State.Todo);
             Form1.tasks.Add(newTask);
-            Update();
             this.Close();
+            if (ParentForm != null)
+            {
+                ParentForm.UpdateTable();
+            }
         }
     }
 }

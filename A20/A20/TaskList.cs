@@ -17,6 +17,7 @@ namespace A20
         public List<Task> Tasks
         {
             get { return tasks; }
+            set { tasks = value; }
         }
 
         public void Add(Task task)
@@ -25,11 +26,19 @@ namespace A20
         }
         public void Remove(Task task)
         {
-
+            tasks.Remove(task);
         }
         public List<Task> Search(String searchCrit)
         {
-            return tasks;
+            List<Task> tasksSearch = new List<Task>();
+            foreach (Task task in tasks)
+            {
+                if (searchCrit.ToLower() == task.Title.ToLower() || searchCrit.ToLower() == task.Desc.ToLower() || searchCrit == task.Creation.ToString() || searchCrit == task.Due.ToString() || searchCrit.ToLower() == task.TaskState.ToString().ToLower())
+                {
+                    tasksSearch.Add(task);
+                }
+            }
+            return tasksSearch;
         }
     }
 }

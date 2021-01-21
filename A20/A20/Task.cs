@@ -16,22 +16,27 @@ namespace A20
         public String Title
         {
             get { return title; }
+            set { title = value; }
         }
         public String Desc
         {
             get { return description; }
+            set { description = value; }
         }
         public DateTime Due
         {
             get { return dueDate; }
+            set { dueDate = value; }
         }
         public DateTime Creation
         {
-            get { return dueDate; }
+            get { return creationDate; }
+            set { creationDate = value; }
         }
         public State TaskState
         {
             get { return taskState; }
+            set { taskState = value; }
         }
         public Task(String name, String desc, DateTime due, DateTime creation, State TState)
         {
