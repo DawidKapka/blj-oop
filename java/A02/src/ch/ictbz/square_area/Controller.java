@@ -1,5 +1,6 @@
 package ch.ictbz.square_area;
 
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextArea;
@@ -18,5 +19,10 @@ public class Controller {
         int height = Integer.parseInt(heightBox.getText());
 
         resultBox.setText(String.valueOf(width * height));
+    }
+
+    @FXML
+    private void onCancelClick() {
+        System.exit(0);
     }
 }

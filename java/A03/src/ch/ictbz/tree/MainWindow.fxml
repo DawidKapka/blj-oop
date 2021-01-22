@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.ictbz.tree.Controller">
+   <children>
+      <TextField fx:id="tWidthBox" layoutX="132.0" layoutY="36.0" onKeyTyped="#tWidthBox_onKeyTyped" prefHeight="27.0" prefWidth="118.0" />
+      <TextField fx:id="tHeightBox" layoutX="132.0" layoutY="82.0" onKeyTyped="#tHeightBox_onKeyTyped" prefHeight="27.0" prefWidth="118.0" />
+      <TextField fx:id="cHeightBox" layoutX="132.0" layoutY="125.0" onKeyTyped="#cHeightBox_onKeyTyped" prefHeight="27.0" prefWidth="118.0" />
+      <Label layoutX="56.0" layoutY="41.0" text="Trunk Width:" />
+      <Label layoutX="52.0" layoutY="87.0" text="Trunk Height;" />
+      <Label layoutX="50.0" layoutY="130.0" text="Crown Height:" />
+      <Button fx:id="drawBtn" layoutX="280.0" layoutY="125.0" mnemonicParsing="false" onAction="#drawBtn_onClick" prefHeight="27.0" prefWidth="118.0" text="Draw" />
+      <TextArea fx:id="resultBox" layoutX="21.0" layoutY="175.0" prefHeight="361.0" prefWidth="458.0">
+         <font>
+            <Font name="Courier New Bold" size="16.0" />
+         </font>
+      </TextArea>
+   </children>
+</AnchorPane>
