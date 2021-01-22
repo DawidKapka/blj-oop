@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.ictbz.todolist.AddWindowController">
+   <children>
+      <TextField fx:id="titleField" layoutX="200.0" layoutY="23.0" />
+      <TextArea fx:id="descField" layoutX="200.0" layoutY="62.0" prefHeight="128.0" prefWidth="161.0" />
+      <DatePicker fx:id="dueDatePicker" layoutX="200.0" layoutY="202.0" prefHeight="21.0" prefWidth="161.0" />
+      <Label layoutX="172.0" layoutY="28.0" prefHeight="17.0" prefWidth="24.0" text="Title" />
+      <Label layoutX="135.0" layoutY="62.0" text="Description" />
+      <Label layoutX="147.0" layoutY="208.0" text="Due Date" />
+      <Button fx:id="saveBtn" layoutX="202.0" layoutY="244.0" mnemonicParsing="false" onAction="#saveBtn_onClick" prefHeight="27.0" prefWidth="71.0" text="Save" />
+      <Button fx:id="cancelBtn" layoutX="285.0" layoutY="244.0" mnemonicParsing="false" onAction="#cancelBtn_onClick" prefHeight="27.0" prefWidth="76.0" text="Cancel" />
+   </children>
+</AnchorPane>
