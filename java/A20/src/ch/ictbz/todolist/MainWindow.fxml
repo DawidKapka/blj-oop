@@ -8,13 +8,13 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.ictbz.todolist.MainWindowController">
    <children>
       <Button fx:id="newBtn" layoutX="14.0" layoutY="28.0" mnemonicParsing="false" onAction="#newBtn_onClick" prefHeight="37.0" prefWidth="94.0" text="New Task" />
-      <Button fx:id="archBtn" layoutX="121.0" layoutY="28.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="94.0" text="Archive" />
-      <Button fx:id="refreshBtn" layoutX="228.0" layoutY="28.0" mnemonicParsing="false" onAction="#UpdateTable" prefHeight="37.0" prefWidth="94.0" text="Refresh" />
-      <Button fx:id="delBtn" layoutX="337.0" layoutY="28.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="94.0" text="Delete" />
-      <Button fx:id="searchBtn" layoutX="691.0" layoutY="28.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="94.0" text="Search" />
-      <TextField fx:id="searchField" layoutX="521.0" layoutY="33.0" />
+      <Button fx:id="archBtn" layoutX="114.0" layoutY="28.0" mnemonicParsing="false" onAction="#archBtn_OnClick" prefHeight="37.0" prefWidth="94.0" text="Show Archive" />
+      <Button fx:id="refreshBtn" layoutX="215.0" layoutY="28.0" mnemonicParsing="false" onAction="#updateTable" prefHeight="37.0" prefWidth="94.0" text="Refresh" />
+      <Button fx:id="editBtn" layoutX="317.0" layoutY="28.0" mnemonicParsing="false" onAction="#editBtn_OnClick" prefHeight="37.0" prefWidth="121.0" text="Edit / Show Details" />
+      <Button fx:id="searchBtn" layoutX="691.0" layoutY="28.0" mnemonicParsing="false" onAction="#searchBtn_OnClick" prefHeight="37.0" prefWidth="94.0" text="Search" />
+      <TextField fx:id="searchField" layoutX="551.0" layoutY="33.0" prefHeight="27.0" prefWidth="131.0" />
       <ListView fx:id="taskList" editable="true" layoutX="21.0" layoutY="84.0" prefHeight="450.0" prefWidth="763.0" />
-
-
+      <Button fx:id="delBtn" layoutX="444.0" layoutY="28.0" mnemonicParsing="false" onAction="#delBtn_OnClick" prefHeight="37.0" prefWidth="94.0" text="Delete" />
+         
    </children>
 </AnchorPane>

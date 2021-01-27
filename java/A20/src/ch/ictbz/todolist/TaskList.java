@@ -13,10 +13,19 @@ public class TaskList {
         tasks.add(task);
     }
     public void remove(Task task) {
-
+        tasks.remove(task);
     }
     public List<Task> search(String searchCrit) {
-        return tasks;
+        List<Task> searchList = new ArrayList<Task>();
+        for (Task t : tasks) {
+            if (t.getTitle().contains(searchCrit)
+                    || t.getDescription().contains(searchCrit)
+                    || t.getDueDate().toString().contains(searchCrit)
+                    || t.getCreationDate().toString().contains(searchCrit)
+                    || t.getState().equals(searchCrit))
+                searchList.add(t);
+        }
+        return searchList;
     }
     public List<Task> getTasks() {
         return tasks;

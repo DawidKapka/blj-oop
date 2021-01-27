@@ -29,13 +29,22 @@ public class Task {
     public String getTitle() {
         return title;
     }
+    public void setTitle(String value) {
+        title = value;
+    }
 
     public String getDescription() {
         return description;
     }
+    public void setDescription(String value) {
+        description = value;
+    }
 
     public LocalDate getDueDate() {
         return dueDate;
+    }
+    public void setDueDate(LocalDate value) {
+        dueDate = value;
     }
 
     public LocalDate getCreationDate() {
@@ -44,5 +53,8 @@ public class Task {
 
     public TaskState getState() {
         return state;
+    }
+    public void setState(TaskState value) {
+        state = value;
     }
 }

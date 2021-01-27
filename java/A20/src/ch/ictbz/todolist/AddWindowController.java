@@ -37,11 +37,9 @@ public class AddWindowController {
         }
         catch (RuntimeException ex) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setHeaderText(ex.toString());
+            alert.setHeaderText(ex.getMessage());
             alert.showAndWait();
         }
-
-
 
     }
 
