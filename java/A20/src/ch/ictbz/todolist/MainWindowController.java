@@ -4,14 +4,11 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
-import java.util.Timer;
 
 public class MainWindowController {
     @FXML
@@ -131,14 +128,13 @@ public class MainWindowController {
                 searchList = tList.search(searchField.getText());
                 isSearch = true;
                 searchBtn.setText("Show All");
-                updateTable();
             }
             else {
                 searchList = tList.getTasks();
                 isSearch = false;
                 searchBtn.setText("Search");
-                updateTable();
             }
+            updateTable();
 
         }
         catch (RuntimeException ex) {

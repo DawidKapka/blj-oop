@@ -1,4 +1,4 @@
-package ch.ictbz.todolist;
+package ch.ictbz.carsim;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -8,13 +8,13 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
-
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("MainWindow.fxml"));
-        primaryStage.setTitle("To Do List");
-        primaryStage.setScene(new Scene(root, 800, 550));
+        primaryStage.setTitle("Hello World");
+        primaryStage.setScene(new Scene(root, 700, 500));
         primaryStage.show();
+
     }
 
 
