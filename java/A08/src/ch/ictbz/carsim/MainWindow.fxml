@@ -26,10 +26,10 @@
             <Font size="60.0"/>
          </font>
       </TextField>
-      <Button fx:id="engSwitch" layoutX="80.0" layoutY="135.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="91.0" text="engine on/off" />
-      <Button fx:id="beepBtn" layoutX="81.0" layoutY="172.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="91.0" text="beep" />
-      <Button fx:id="accBtn" layoutX="538.0" layoutY="262.0" mnemonicParsing="false" prefHeight="212.0" prefWidth="102.0" text="Accelerate" />
-      <Button fx:id="breakBtn" layoutX="317.0" layoutY="263.0" mnemonicParsing="false" prefHeight="212.0" prefWidth="195.0" text="Break" />
+      <Button fx:id="engSwitch" layoutX="80.0" layoutY="135.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="91.0" text="engine on/off" disable="true" onAction="#switchEngine"/>
+      <Button fx:id="beepBtn" layoutX="81.0" layoutY="172.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="91.0" text="beep" disable="true"/>
+      <Button fx:id="accBtn" layoutX="538.0" layoutY="262.0" mnemonicParsing="false" prefHeight="212.0" prefWidth="102.0" text="Accelerate" disable="true"/>
+      <Button fx:id="breakBtn" layoutX="317.0" layoutY="263.0" mnemonicParsing="false" prefHeight="212.0" prefWidth="195.0" text="Break" disable="true"/>
       <TextField fx:id="engineLight" layoutX="175.0" layoutY="117.0" prefHeight="27.0" prefWidth="24.0" style="-fx-background-color: #8c8c8c;" editable="false" />
    </children>
 </AnchorPane>
