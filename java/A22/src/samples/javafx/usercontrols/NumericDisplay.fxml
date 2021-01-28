@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="145.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="50.0" layoutX="10.0" layoutY="19.0" stroke="#cccccc" strokeType="INSIDE" width="125.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="11.0" />
+      <Label layoutX="28.0" layoutY="36.0" text="Temperatur:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="temperatureLabel" layoutX="114.0" layoutY="37.0" text="0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="11.0" style="-fx-background-color: #fff;" text="Numeric Display" />
+   </children>
+</AnchorPane>
