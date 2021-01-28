@@ -1,6 +1,10 @@
 package ch.ictbz.carsim;
 
 import com.sun.org.apache.bcel.internal.generic.IF_ACMPEQ;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
+
+import java.io.File;
 
 public class Car {
     private String brand;
@@ -52,7 +56,9 @@ public class Car {
         }
     }
     public void useHorn() {
-
+        Media horn = new Media(new File("sounds/horn.wav").toURI().toString());
+        MediaPlayer hornPlayer = new MediaPlayer(horn);
+        hornPlayer.play();
     }
     public void changeGear() {
         if (speed <= 10)

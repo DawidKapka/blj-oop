@@ -10,7 +10,7 @@ import javafx.scene.control.*;
 import javafx.util.Duration;
 import javafx.util.StringConverter;
 
-import java.util.concurrent.TimeUnit;
+
 
 public class MainWindowController {
     @FXML private ChoiceBox carCmbBox;
@@ -108,6 +108,9 @@ public class MainWindowController {
             accBtn.setDisable(true);
             engineLight.setStyle("-fx-background-color: #8c8c8c");
         }
+    }
+    @FXML private void useHorn() {
+        selectedCar.useHorn();
     }
 
 
